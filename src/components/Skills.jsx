@@ -1,4 +1,26 @@
-function Skills() {
+import React from "react";
+const skills = [
+  { name: "C", icon: "c.svg" },
+  { name: "C++", icon: "c.svg" },
+
+  { name: "HTML", icon: "html5.svg" },
+  { name: "CSS", icon: "css3.svg" },
+  { name: "JavaScript", icon: "javascript.svg" },
+  { name: "ReactJS", icon: "react.svg" },
+  { name: "NodeJS", icon: "nodejs.svg" },
+  { name: "Express.js", icon: "nodejs.svg" },
+  { name: "MongoDB", icon: "mongodb.svg" },
+  { name: "Git", icon: "git.svg" },
+  
+  { name: "Bootstrap", icon: "bootstrap.svg" },
+  
+  
+  { name: "TailwindCSS", icon: "tailwind.svg" },
+  { name: "VS Code", icon: "vscode.svg" },
+  { name: "Figma", icon: "figma.svg" },
+];
+
+const Skills = () => {
     return (
       <section className="skills section" id="skills">
         <div className="container flex-center">
@@ -18,11 +40,17 @@ function Skills() {
                 </ul>
               </div>
               <div className="education">
-                <h4><label>SKILLS</label></h4>
-                <ul className="bars">
-                  <li className="bar"><div className="info"><span>HTML</span><span>95%</span></div><div className="line html"></div></li>
-                  {/* Repeat for other skills */}
-                </ul>
+              <div className="skills-container">
+      <h4><label>SKILLS</label></h4>
+      <div className="skills-grid">
+        {skills.map((skill, index) => (
+          <div className="skill-item" key={index}>
+            <img src={`/icons/${skill.icon}`} alt={skill.name} className="skill-icon" />
+            <span>{skill.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
               </div>
             </div>
             <div className="skills-description">

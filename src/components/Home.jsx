@@ -1,3 +1,4 @@
+import React from 'react';
 import fakepic from '../assets/fakepic.png';
 
 function Home() {
@@ -9,12 +10,12 @@ function Home() {
           <a href="#"><i className="fab fa-github"></i></a>
         </div>
         <div className="info">
-          <h2>HII, I'M SHAURYA GUPTA</h2>
+          <h2>HII, I'M <br />SHAURYA &nbsp; GUPTA &nbsp;</h2>
           <h3>SOFTWARE DEVELOPER</h3>
           <a href="#" className="btn">DOWNLOAD CV <i className="fas fa-arrow-circle-right"></i></a>
         </div>
         <div className="blob">
-          <img src={fakepic} alt="Profile" />
+          <img src={fakepic} alt="Profile" loading="lazy" />
         </div>
       </div>
       <a href="#about" className="scroll-down">SCROLL DOWN <i className="fas fa-arrow-down"></i></a>

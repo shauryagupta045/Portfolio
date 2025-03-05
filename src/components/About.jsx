@@ -1,3 +1,4 @@
+import React from 'react';
 import piccc from '../assets/piccc.png';
 
 function About() {
@@ -8,7 +9,7 @@ function About() {
         <h2 className="section-title-02">THIS IS SHAURYA GUPTA</h2>
         <div className="content flex-center">
           <div className="about-img">
-            <img src={piccc} alt="About Me" />
+            <img src={piccc} alt="About Me" loading="lazy" />
           </div>
           <div className="about-info">
             <div className="description">

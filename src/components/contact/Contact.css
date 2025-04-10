@@ -1,0 +1,124 @@
+.contact .container .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .contact-left {
+    margin-left: 8%;
+  }
+  
+  .contact-left h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .contact-list li {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-list li h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .contact-list li h3 i {
+    color: #7806a5;
+    margin-right: 10px;
+    font-size: 25px;
+  }
+  
+  .contact-list li span {
+    color: #777;
+    margin-left: 40px;
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .contact-list .item-title span {
+    text-align: center;
+  }
+  
+  .contact-list li span a {
+    color: #777;
+  }
+  
+  .contact-right {
+    margin-right: 7%;
+  }
+  
+  .contact-right p {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .contact-right p span {
+    color: #7806a5;
+    font-weight: 700;
+    margin-top: 30px;
+  }
+  
+  .contact-form {
+    margin-top: 40px;
+  }
+  
+  .first-row input,
+  .second-row input,
+  .third-row input,
+  .fourth-row textarea {
+    border: none;
+    color: black;
+    background: #dcadef;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 15px 20px 20px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: 0.5s ease;
+    z-index: 999;
+  }
+  
+  .fourth-row textarea {
+    width: 100%;
+  }
+  
+  ::placeholder {
+    color: #29072c;
+  }
+  
+  .first-row input {
+    width: 100%;
+  }
+  
+  .second-row input {
+    width: 100%;
+  }
+  
+  .third-row input {
+    width: 100%;
+  }
+  
+  .contact-form .btn {
+    margin-left: 27%;
+    border: none;
+    margin-top: 10px;
+  }
+  
+  .contact-form .btn:hover {
+    border: 2px solid black;
+    transform: scale(1.05);
+  }
+  
+  .first-row input:hover,
+  .second-row input:hover,
+  .third-row input:hover,
+  .fourth-row textarea:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+  }

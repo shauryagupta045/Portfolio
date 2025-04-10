@@ -1,0 +1,74 @@
+
+
+
+  .about .container .content {
+      display: flex;
+      flex-direction: row;
+      column-gap: 40px;
+      width: 100%;
+      align-items: center;
+  }
+  
+  
+  .about-img {
+      flex: 1;
+      height: auto;
+      max-width: 500px;
+    }
+  
+  
+  .about-img {
+    position: relative;
+  }
+  
+  .about-img img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+  }
+  
+  .about-info .description {
+    max-width: 700px;
+  }
+  
+  .about-info .description h3 {
+      font-size: 30px; 
+      font-weight: bold;
+      color: rgb(68, 6, 126); 
+      text-align: left;
+      margin-top: 0;
+  }
+  
+  .about-info .description p {
+    color: #777;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-top: 15px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid rgba(21, 21, 21, 0.87);
+  }
+  
+  
+  .btn {
+    background-color: rgb(68, 6, 126);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: 1s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #ffffff;
+    color: rgb(68, 6, 126);
+    font-weight: bolder;
+    border: 3px solid black;
+    border-radius: 10px;
+    transform: scale(1.05);
+  }
+  

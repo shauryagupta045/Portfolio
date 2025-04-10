@@ -1,21 +1,27 @@
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import React from 'react';
+import Skills from './components/skills/Skills';
+import Navbar from './components/navbar/Navbar';
+import Home from './components/Home/Home';
+import About from './components/about/About';
+import Projects from './components/projects/Projects';
+import Footer from './components/footer/Footer';
+import Contact from './components/contact/Contact';
+
+
+
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+    
+      <Navbar/>
+      <Home/>
+      <About/>
+      <Skills/>
+      <Projects/>
+      <Contact/>
+      <Footer/>
+    
     </>
   );
 }

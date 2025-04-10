@@ -1,7 +1,8 @@
 import React from 'react';
+import "./Navbar.css"
 import { useState, useEffect } from 'react';
 
-function Navbar() {
+const  Navbar = () => {
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {

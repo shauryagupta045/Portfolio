@@ -2,7 +2,7 @@
 import React from 'react';
 
 
-function Projects() {
+const  Projects =() => {
     return (
       <section className="projects section" id="projects">
         <div className="container flex-center">

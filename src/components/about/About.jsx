@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css"; // Make sure your styles are in this file
 import { FaArrowCircleRight } from "react-icons/fa";
+import  sha2 from "../../assets/sg4.png";
 
 const About = () => {
   return (
@@ -10,7 +11,7 @@ const About = () => {
         <h2 className="section-title-02">THIS IS SHAURYA GUPTA</h2>
         <div className="content flex-center">
           <div className="about-img">
-            <img src="./assets/sg4.png" alt="Shaurya Gupta" />
+            <img src={sha2} alt="Shaurya Gupta" />
           </div>
           <div className="about-info">
             <div className="description">

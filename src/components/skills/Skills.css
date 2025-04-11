@@ -1,0 +1,451 @@
+.skills .container .content {
+  width: 100%;
+}
+
+.skills-description {
+  max-width: 1200px;
+  margin-bottom: 50px;
+}
+
+.skills-description h3 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.skills-description p {
+  margin-bottom: 90px;
+  color: #777;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+}
+
+.skills-info {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.skills-info h4 {
+  margin-bottom: 30px;
+}
+
+.skills-info h4 label {
+  background: rgb(68, 6, 126);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+/* Education CSS */
+.btech-card {
+  background: linear-gradient(to bottom right, #eff6ff, #eef2ff);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #dbeafe;
+  transform: translate(0);
+  transition: all 300ms;
+  opacity: 0;
+  animation: fadeUp 1s ease-out 0.4s forwards;
+}
+
+.btech-card:hover {
+  transform: scale(1.02);
+}
+
+@media (min-width: 768px) {
+  .btech-card {
+      padding: 2rem;
+  }
+}
+
+.btech-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .btech-content {
+      flex-direction: row;
+  }
+}
+
+.btech-details,
+.btech-courses {
+  flex: 1 1 0%;
+}
+
+.btech-title-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.btech-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #2563eb;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.btech-degree {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.btech-specialization {
+  font-size: 1.25rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.btech-info-list {
+  margin-top: 0.75rem;
+}
+
+.btech-info-list .info-item + .info-item {
+  margin-top: 0.75rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4b5563;
+}
+
+.info-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #2563eb;
+}
+
+.courses-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.courses-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #2563eb;
+}
+
+.courses-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .courses-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.course-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #374151;
+  font-size: 0.875rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #dbeafe;
+  transform: translate(0);
+  transition: transform 200ms;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.course-item:hover {
+  transform: scale(1.05);
+}
+
+.school-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .school-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.class12-card {
+  background: linear-gradient(to bottom right, #faf5ff, #fdf2f8);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f3e8ff;
+  transform: translate(0);
+  transition: verything 300ms;
+  opacity: 0;
+  animation: fadeLeft 1s ease-out 0.6s forwards;
+}
+
+.class12-card:hover {
+  transform: scale(1.02);
+}
+
+.class10-card {
+  background: linear-gradient(to bottom right, #ecfdf5, #f0fdfa);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d1fae5;
+  transform: translate(0);
+  transition: all 300ms;
+  opacity: 0;
+  animation: fadeRight 1s ease-out 0.8s forwards;
+}
+
+.class10-card:hover {
+  transform: scale(1.02);
+}
+
+.school-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.school-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.class12-card .school-icon {
+  color: #9333ea;
+}
+
+.class10-card .school-icon {
+  color: #059669;
+}
+
+.school-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.school-info-list {
+  margin-top: 0.75rem;
+}
+
+.school-info-list .info-item + .info-item {
+  margin-top: 0.75rem;
+}
+
+.class12-card .info-icon {
+  color: #9333ea;
+}
+
+.class10-card .info-icon {
+  color: #059669;
+}
+
+.stream-info {
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #f3e8ff;
+  color: #4b5563;
+}
+
+.stream-label {
+  color: #7e22ce;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* My skills - skills */
+.skills-content {
+  color: #29072c;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.toggle-btn.active {
+  background-color: rgb(68, 6, 126);
+}
+
+.skills-list,
+.tools-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  display: none;
+  justify-items: center;
+}
+
+.skills-list li,
+.tools-list li {
+  background-color: #f5f1fa;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+.skills-list li:hover,
+.tools-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skills-list img,
+.tools-list img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+#skills-list {
+  display: grid;
+}
+
+.skills-list li::after,
+.tools-list li::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7303bd;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.skills-list li:hover::after,
+.tools-list li:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.skills-list.visible,
+.tools-list.visible {
+    display: grid;
+}
+
+.skills-list.hidden,
+.tools-list.hidden {
+    display: none;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Home.css"; 
 import { FaLinkedin, FaGithub, FaArrowDown } from "react-icons/fa";
+import  sha from "../../assets/sg3.png";
 
 const roles = ["SOFTWARE ENGINEER", "WEB DEVELOPER", "UI/UX DESIGNER"];
 
@@ -85,7 +86,7 @@ const Home = () => {
           </div>
 
           <div className="blobpic">
-            <img src=" " alt=" photo " />
+            <img src={sha} alt=" photo " />
           </div>
         </div>
         <a href="#about" className="scroll-down">

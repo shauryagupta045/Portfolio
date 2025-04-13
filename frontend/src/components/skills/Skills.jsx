@@ -9,7 +9,7 @@ import reactImg from "../../assets/react.png";
 import vite from "../../assets/vite.png";
 import tailwind from "../../assets/tailwind-01.png";
 import gsap from "../../assets/gsap.png";
-import node from "../../assets/Node.png";
+import node from "../../assets/node.png";
 import mongo from "../../assets/Mongo.png";
 import vscode from "../../assets/vs-code.png";
 import git from "../../assets/git.png";

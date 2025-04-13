@@ -1,6 +1,5 @@
 import React from "react";
-import "./About.css"; // Make sure your styles are in this file
-import { FaArrowCircleRight } from "react-icons/fa";
+import "./About.css"; 
 import  sha2 from "../../assets/sg4.png";
 
 const About = () => {
@@ -35,10 +34,9 @@ const About = () => {
               <a
                 href="https://drive.google.com/file/d/1MwI5n1pGVJktETjQMehlvUQJj8t0jF2T/view"
                 className="btn"
-                target="_blank"
-                rel="noopener noreferrer"
+              
               >
-                DOWNLOAD CV <FaArrowCircleRight />
+                DOWNLOAD CV 
               </a>
             </div>
           </div>

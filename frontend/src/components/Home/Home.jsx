@@ -1,57 +1,53 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./Home.css"; 
+import React, { useEffect, useState } from "react";
+import "./Home.css";
 import { FaLinkedin, FaGithub, FaArrowDown } from "react-icons/fa";
-import  sha from "../../assets/sg3.png";
+import sha from "../../assets/sg3.png";
 
 const roles = ["SOFTWARE ENGINEER", "WEB DEVELOPER", "UI/UX DESIGNER"];
 
 const Home = () => {
-  const [text, setText] = useState("");
+
   const [isDeleting, setIsDeleting] = useState(false);
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
-  const typingTimeoutRef = useRef(null);
 
   useEffect(() => {
-    const currentText = roles[roleIndex];
+    const currentRole = roles[roleIndex];
 
-    if (isDeleting) {
-      setText(currentText.substring(0, charIndex));
-      setCharIndex((prev) => prev - 1);
-    } else {
-      setText(currentText.substring(0, charIndex));
-      setCharIndex((prev) => prev + 1);
+  
+    if (!isDeleting && charIndex < currentRole.length) {
+      const timeout = setTimeout(() => {
+        setCharIndex((prev) => prev + 1);
+      }, 100); 
+      return () => clearTimeout(timeout);
     }
-
-    if (!isDeleting && charIndex === currentText.length) {
-      typingTimeoutRef.current = setTimeout(() => {
+ 
+    else if (!isDeleting && charIndex === currentRole.length) {
+      const timeout = setTimeout(() => {
         setIsDeleting(true);
-      }, 1000);
-    } else if (isDeleting && charIndex === 0) {
-      setIsDeleting(false);
-      setRoleIndex((prev) => (prev + 1) % roles.length);
+      }, 1000); 
+      return () => clearTimeout(timeout);
     }
 
-    const speed = isDeleting ? 200 : 100;
-    typingTimeoutRef.current = setTimeout(() => {}, speed);
-
-    return () => clearTimeout(typingTimeoutRef.current);
+    else if (isDeleting && charIndex > 0) {
+      const timeout = setTimeout(() => {
+        setCharIndex((prev) => prev - 1);
+      }, 50); 
+      return () => clearTimeout(timeout);
+    }
+    
+    else if (isDeleting && charIndex === 0) {
+      const timeout = setTimeout(() => {
+        setIsDeleting(false);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      }, 500); 
+      return () => clearTimeout(timeout);
+    }
   }, [charIndex, isDeleting, roleIndex]);
 
-  useEffect(() => {
-    const interval = setTimeout(() => {
-      const currentText = roles[roleIndex];
-      if (isDeleting) {
-        setText(currentText.substring(0, charIndex - 1));
-        setCharIndex((prev) => prev - 1);
-      } else {
-        setText(currentText.substring(0, charIndex + 1));
-        setCharIndex((prev) => prev + 1);
-      }
-    }, isDeleting ? 100 : 200);
 
-    return () => clearTimeout(interval);
-  }, [text]);
+  const currentRole = roles[roleIndex];
+  const displayText = currentRole.substring(0, charIndex);
 
   return (
     <>
@@ -82,16 +78,16 @@ const Home = () => {
               <br />
               <span>SHAURYA GUPTA</span>
             </h2>
-            <h3>{text}</h3>
+            <h3>{displayText}</h3>
+           
           </div>
 
+
           <div className="blobpic">
-            <img src={sha} alt=" photo " />
+            <img src={sha} alt="photo" />
           </div>
         </div>
-        <a href="#about" className="scroll-down">
-          SCROLL DOWN <FaArrowDown />
-        </a>
+        <a href="#about" className="scroll-down"> SCROLL DOWN <span className="arrow-icon"><FaArrowDown /></span></a>
       </section>
     </>
   );

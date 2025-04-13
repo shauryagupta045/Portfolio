@@ -53,6 +53,18 @@
     margin-top: 15px;
   }
   
+  .cursor {
+    font-size: 30px;
+    color: #000000;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
   .blobpic {
     width: 350px;
     height: 350px;
@@ -94,23 +106,26 @@
   
   .home .scroll-down {
     color: rgb(68, 6, 126);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     margin-top: 70px;
+   
   }
   
-  .home .scroll-down i {
-    color: rgb(68, 6, 126);
-    font-size: 8px;
-    animation: arrow-down ease 2s infinite;
+  .home .scroll-down .arrow-icon {
+    display: inline-block;
+    animation: arrow-down 2s ease infinite;
   }
   
   @keyframes arrow-down {
-    10% {
-      transform: translateY(-10px);
+    0% {
+      transform: translateY(0);
     }
-    70% {
+    50% {
       transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
   

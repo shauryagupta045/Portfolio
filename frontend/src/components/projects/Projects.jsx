@@ -9,7 +9,10 @@ import {
   ExternalLinkIcon,
   GithubIcon,
 } from 'lucide-react';
-import './Project.css'; // Keep your CSS import here
+import './Project.css'; 
+import nextgen from "../../assets/nextgen.png";
+import vision from "../../assets/vision.png";
+import note from "../../assets/Notezy.png";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -84,7 +87,7 @@ const Projects = () => {
       title: 'Notezy',
       description: 'Your Digital Desk for Notes & Tasks',
       icon: <NoteIcon size={32} />,
-      image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80',
+      image: note,
       features: ['Real-time Generation', 'Multi-track Export', 'Genre Mixing'],
       techStack: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
       githubLink: 'https://github.com/shauryagupta045/NotesTaskingApp',
@@ -95,22 +98,22 @@ const Projects = () => {
       title: 'NextGen-G',
       description: "From Classic Hits to New Releases—We've Got You Covered",
       icon: <MonitorIcon size={32} />,
-      image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80',
-      features: ['Real-time Generation', 'Multi-track Export', 'Genre Mixing'],
-      techStack: ['React', 'TensorFlow.js', 'Web Audio API'],
-      githubLink: '#',
-      demoLink: '#',
+      image: nextgen,
+      features: ['Store Feature', 'News Section', 'Community Forum or Discussion Board'],
+      techStack: ['React.js', 'TailWind CSS', 'Gsap'],
+      githubLink: 'https://github.com/shauryagupta045/GamingShopWebsite',
+      demoLink: 'https://nextgeng.onrender.com/',
     },
     {
       className: 'vision',
       title: 'Vision AI',
       description: "Ask me anything—I've got answers",
       icon: <BrainIcon size={32} />,
-      image: 'https://images.unsplash.com/photo-1552168324-d612d77725e3?auto=format&fit=crop&q=80',
-      features: ['Real-time Generation', 'Multi-track Export', 'Genre Mixing'],
-      techStack: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-      githubLink: '#',
-      demoLink: '#',
+      image: vision,
+      features: ['Understands natural language', 'Knows many topics', 'Writes like humans','Performs user tasks'],
+      techStack: ['React.js', 'Gemini APi'],
+      githubLink: 'https://github.com/shauryagupta045/Vision_AI',
+      demoLink: 'https://shauryagupta045.github.io/Vision_AI/',
     },
     {
       className: 'games',

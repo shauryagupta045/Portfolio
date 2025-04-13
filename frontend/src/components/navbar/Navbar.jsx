@@ -1,9 +1,10 @@
-import React from 'react';
-import "./Navbar.css"
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import "./Navbar.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-const  Navbar = () => {
+const Navbar = () => {
   const [sticky, setSticky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,22 +14,29 @@ const  Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className={sticky ? 'sticky' : ''}>
       <div className="nav-bar">
         <a href="#" className="logo">SHAURYA.</a>
-        <div className="navigation">
+        <div className={`navigation ${menuOpen ? 'active' : ''}`}>
           <div className="nav-item">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#contact">CONTACT</a>
+            <a href="#home" onClick={toggleMenu}>HOME</a>
+            <a href="#about" onClick={toggleMenu}>ABOUT</a>
+            <a href="#skills" onClick={toggleMenu}>SKILLS</a>
+            <a href="#projects" onClick={toggleMenu}>PROJECTS</a>
+            <a href="#contact" onClick={toggleMenu}>CONTACT</a>
           </div>
+        </div>
+        <div className="hamburger" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
       </div>
     </header>
   );
-}
+};
 
 export default Navbar;

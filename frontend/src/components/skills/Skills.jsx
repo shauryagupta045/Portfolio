@@ -10,7 +10,7 @@ import vite from "../../assets/vite.png";
 import tailwind from "../../assets/tailwind-01.png";
 import gsap from "../../assets/gsap.png";
 import node from "../../assets/node.png";
-import mongo from "../../assets/Mongo.png";
+import mongo from "../../assets/mongo.png";
 import vscode from "../../assets/vs-code.png";
 import git from "../../assets/git.png";
 import github from "../../assets/github.png";

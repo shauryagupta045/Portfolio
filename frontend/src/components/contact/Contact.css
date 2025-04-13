@@ -122,3 +122,155 @@
     transform: scale(1.07);
     box-shadow: 0 0 10px rgb(0, 0, 0);
   }
+
+ 
+@media (max-width: 1024px) {
+  .contact .container .content {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .contact-left {
+    margin-left: 0; 
+    margin-bottom: 40px; 
+  }
+
+  .contact-right {
+    margin-right: 0; 
+  }
+
+  .contact-left h2 {
+    font-size: 28px; 
+  }
+
+  .contact-list li {
+    margin-top: 40px; 
+    margin-bottom: 20px;
+  }
+
+  .contact-list li h3 {
+    font-size: 20px; 
+  }
+
+  .contact-list li h3 i {
+    font-size: 20px; 
+  }
+
+  .contact-list li span {
+    font-size: 14px;
+    margin-left: 30px; 
+  }
+
+  .contact-right p {
+    font-size: 25px; 
+  }
+
+  .first-row input,
+  .second-row input,
+  .third-row input,
+  .fourth-row textarea {
+    font-size: 18px; 
+    padding: 12px 15px; 
+  }
+
+  .contact-form .btn {
+    margin-left: 0; 
+    width: 50%; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .contact-left h2 {
+    font-size: 24px; 
+  }
+
+  .contact-list li {
+    margin-top: 30px; 
+    margin-bottom: 15px;
+  }
+
+  .contact-list li h3 {
+    font-size: 18px; 
+  }
+
+  .contact-list li h3 i {
+    font-size: 18px; 
+  }
+
+  .contact-list li span {
+    font-size: 12px; 
+    margin-left: 20px; 
+  }
+
+  .contact-right p {
+    font-size: 20px; 
+    text-align: center; 
+  }
+
+  .contact-right p span {
+    display: block; 
+    margin-top: 10px;
+  }
+
+  .first-row input,
+  .second-row input,
+  .third-row input,
+  .fourth-row textarea {
+    font-size: 16px;
+    padding: 10px 12px; 
+  }
+
+  .fourth-row textarea {
+    height: 100px; 
+  }
+
+  .contact-form .btn {
+    width: 70%; 
+    font-size: 16px; 
+    padding: 10px 15px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-left h2 {
+    font-size: 20px; 
+  }
+
+  .contact-list li {
+    margin-top: 20px; 
+    margin-bottom: 10px;
+  }
+
+  .contact-list li h3 {
+    font-size: 16px;
+  }
+
+  .contact-list li h3 i {
+    font-size: 16px; 
+  }
+
+  .contact-list li span {
+    font-size: 10px; 
+    margin-left: 15px; 
+  }
+
+  .contact-right p {
+    font-size: 18px; 
+  }
+
+  .first-row input,
+  .second-row input,
+  .third-row input,
+  .fourth-row textarea {
+    font-size: 14px;
+    padding: 8px 10px; 
+  }
+
+  .contact-form .btn {
+    width: 100%; 
+    font-size: 14px; 
+    margin-left: 0; 
+    padding: 8px 12px; 
+  }
+}

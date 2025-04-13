@@ -449,3 +449,166 @@
 .tools-list.hidden {
     display: none;
 }
+
+
+@media (max-width: 1024px) {
+  .skills-list,
+  .tools-list {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr)); 
+  }
+
+  .school-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr)); 
+  }
+
+  .btech-content {
+    flex-direction: column; 
+  }
+
+  .skills-description h3 {
+    font-size: 32px; 
+  }
+
+  .section-title {
+    font-size: 1.5rem; 
+  }
+
+  .section-text {
+    font-size: 0.9rem; 
+  }
+
+  .toggle-btn {
+    font-size: 16px;
+    padding: 8px 15px; 
+  }
+
+  .skills-list li,
+  .tools-list li {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skills-list img,
+  .tools-list img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .skills-list,
+  .tools-list {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .skills-description {
+    margin-bottom: 30px; 
+  }
+
+  .skills-description h3 {
+    font-size: 28px; 
+  }
+
+  .section-title {
+    font-size: 1.2rem; 
+  }
+
+  .section-text {
+    font-size: 0.85rem; 
+    margin-bottom: 1rem; 
+  }
+
+  .skills-toggle {
+    flex-direction: column; 
+    gap: 5px;
+  }
+
+  .toggle-btn {
+    font-size: 14px; 
+    padding: 6px 12px; 
+    width: 100%; 
+  }
+
+  .skills-list li,
+  .tools-list li {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skills-list img,
+  .tools-list img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .btech-card {
+    padding: 1rem; 
+  }
+
+  .btech-degree {
+    font-size: 1.25rem; 
+  }
+
+  .btech-specialization {
+    font-size: 1rem; 
+  }
+
+  .courses-title {
+    font-size: 1rem; 
+  }
+
+  .course-item {
+    font-size: 0.75rem; 
+  }
+
+  .school-title {
+    font-size: 1rem; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .skills-list,
+  .tools-list {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  .skills-description h3 {
+    font-size: 24px; 
+  }
+
+  .section-title {
+    font-size: 1rem; 
+  }
+
+  .section-text {
+    font-size: 0.8rem; 
+    margin-bottom: 0.5rem; 
+  }
+
+  .skills-list li,
+  .tools-list li {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skills-list img,
+  .tools-list img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .btech-info-list .info-item {
+    font-size: 0.75rem; 
+  }
+
+  .school-info-list .info-item {
+    font-size: 0.75rem; 
+  }
+}

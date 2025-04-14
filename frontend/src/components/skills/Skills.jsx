@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Skills.css"; 
 
+import c from "../../assets/c.png";
+import c1 from "../../assets/c++.png";
 import html5 from "../../assets/html5.png";
 import css3 from "../../assets/css3.png";
 import javascript from "../../assets/javascript.png";
@@ -23,6 +25,8 @@ const Skills = () => {
   const [showSkillList, setShowSkillList] = useState(true);
 
   const skills = [
+    { title: "C Languague", img: c },
+    { title: "C++ Languague", img: c1 },
     { title: "HTML5", img: html5 },
     { title: "CSS3", img: css3 },
     { title: "JavaScript", img: javascript },

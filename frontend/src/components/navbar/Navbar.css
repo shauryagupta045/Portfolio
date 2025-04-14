@@ -1,12 +1,22 @@
-
+/* Reset */
 a {
   text-decoration: none;
 }
 
 li {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+/* Prevent horizontal scroll globally */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
 header {
   position: fixed;
   top: 0;
@@ -15,6 +25,7 @@ header {
   z-index: 999;
   backdrop-filter: blur(20px);
   transition: 0.5s ease;
+  overflow-x: hidden; /* Ensure no child spills over */
 }
 
 header.sticky {
@@ -33,22 +44,29 @@ header.sticky {
   transition: 0.5s ease;
   height: calc(65px + 15px);
   max-width: 1250px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 header.sticky .nav-bar {
   height: calc(32px + 15px);
 }
 
+/* Logo */
 .nav-bar .logo {
   color: rgb(68, 6, 126);
   font-size: 20px;
   font-weight: bolder;
+  white-space: nowrap;
 }
 
+/* Nav Items */
 .nav-item a {
   color: rgb(68, 6, 126);
   font-size: 15px;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .nav-item a:not(:last-child) {
@@ -59,13 +77,13 @@ header.sticky .nav-bar {
   color: blue;
 }
 
+/* Hamburger */
 .hamburger {
   display: none;
   font-size: 25px;
   color: rgb(68, 6, 126);
   cursor: pointer;
 }
-
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -87,6 +105,7 @@ header.sticky .nav-bar {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
   }
 
   .navigation.active {

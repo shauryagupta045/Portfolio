@@ -115,6 +115,7 @@ const Projects = () => {
       githubLink: 'https://github.com/shauryagupta045/Vision_AI',
       demoLink: 'https://shauryagupta045.github.io/Vision_AI/',
     },
+    /* 
     {
       className: 'games',
       title: 'Games',
@@ -124,7 +125,7 @@ const Projects = () => {
       techStack: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
       githubLink: '#',
       demoLink: '#',
-    },
+    },*/
   ];
 
   return (

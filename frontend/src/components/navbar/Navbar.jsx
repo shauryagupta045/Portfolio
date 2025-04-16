@@ -14,6 +14,11 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
+  }, [menuOpen]);
+  
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };

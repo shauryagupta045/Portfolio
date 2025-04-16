@@ -274,3 +274,9 @@
     padding: 8px 12px; 
   }
 }
+.form-result {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+  color: green; /* or red for errors based on the message */
+}

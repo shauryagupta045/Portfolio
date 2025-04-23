@@ -9,6 +9,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -16,9 +18,16 @@ body {
   background-color: #fff;
   margin: 30px 0 0 0;
   transition: 0.5s ease;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+#root {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-/* Animation part */
 ::-webkit-scrollbar {
   width: 10px;
   background: #969696;

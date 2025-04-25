@@ -13,6 +13,7 @@ import './Project.css';
 import nextgen from "../../assets/nextgen.png";
 import vision from "../../assets/vision.png";
 import note from "../../assets/Notezy.png";
+import sf from "../../assets/sf.png";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -126,6 +127,18 @@ const Projects = () => {
       githubLink: '#',
       demoLink: '#',
     },*/
+    {
+      className: 'elearing',
+      title: 'Skill-Forge',
+      description: "Empower your learning journey with expert-led courses, interactive content, and career-ready skills.",
+      icon: <MonitorIcon size={32} />,
+      image: sf,
+      features: ['Interactive Courses', 'Progress Tracking', 'Certification on Completion'],
+      techStack: ['html5', 'CSS', 'javaScript', 'bootstrap'],
+      githubLink: 'https://github.com/shauryagupta045/Skill-Forge_ElearingWebsite',
+      demoLink: 'https://skill-forge-jade.vercel.app/',
+    },
+
   ];
 
   return (

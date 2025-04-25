@@ -32,7 +32,7 @@ const About = () => {
                 and drive innovation that makes a difference.
               </p>
               <a
-                href="https://drive.google.com/file/d/1MwI5n1pGVJktETjQMehlvUQJj8t0jF2T/view"
+                href="https://drive.google.com/file/d/1R3fgcS-1NINPZ3wfK0wiCvr53ej5uamJ/view?usp=sharing"
                 className="btn"
               
               >

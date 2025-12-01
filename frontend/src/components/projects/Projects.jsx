@@ -4,12 +4,11 @@ import {
   GamepadIcon,
   BrainIcon,
   MonitorIcon,
-  CheckIcon,
-  ServerIcon,
   ExternalLinkIcon,
   GithubIcon,
+  SparklesIcon
 } from 'lucide-react';
-import './Project.css'; 
+import './Project.css';
 import nextgen from "../../assets/nextgen.png";
 import vision from "../../assets/vision.png";
 import note from "../../assets/Notezy.png";
@@ -18,64 +17,53 @@ import sf from "../../assets/sf.png";
 const ProjectCard = ({ project }) => {
   return (
     <div className="project-card">
-      <div className={`project-header ${project.className || ''}`}>
-        <div className="project-title">
-          <div className="icon-title">
-            {project.icon || <NoteIcon size={32} />}
-            <h2>{project.title}</h2>
+      <div className="card-image-container">
+        <img src={project.image} alt={project.title} className="project-image" />
+        <div className="card-overlay">
+          <div className="project-links">
+            {project.githubLink && (
+              <a href={project.githubLink} className="link-btn github" target="_blank" rel="noopener noreferrer" title="View Code">
+                <GithubIcon size={22} />
+              </a>
+            )}
+            {project.demoLink && (
+              <a href={project.demoLink} className="link-btn demo" target="_blank" rel="noopener noreferrer" title="Live Demo">
+                <ExternalLinkIcon size={22} />
+              </a>
+            )}
           </div>
-          <p>{project.description}</p>
         </div>
       </div>
 
-      <div className="project-content">
-        {project.image && (
-          <div className="project-image">
-            <img src={project.image} alt={project.alt || project.title} />
+      <div className="card-content">
+        <div className="project-header">
+          <div className={`icon-box ${project.className}`}>
+            {project.icon}
           </div>
-        )}
-
-        {project.features && (
-          <div className="features">
-            <div className="feature-header">
-              <CheckIcon size={20} />
-              <span>Features</span>
-            </div>
-            <div className="feature-list">
-              {project.features.map((feature, index) => (
-                <div key={index}>{feature}</div>
-              ))}
-            </div>
+          <div className="title-box">
+            <h3>{project.title}</h3>
+            <span className="project-type">{project.type}</span>
           </div>
-        )}
+        </div>
 
-        {project.techStack && (
-          <div className="tech-stack">
-            <div className="tech-header">
-              <ServerIcon size={20} />
-              <span>Tech Stack</span>
-            </div>
-            <div className="tech-tags">
-              {project.techStack.map((tech, index) => (
-                <span key={index}>{tech}</span>
-              ))}
-            </div>
+        <p className="project-description">{project.description}</p>
+
+        <div className="tech-stack-container">
+          {project.techStack.map((tech, index) => (
+            <span key={index} className="tech-pill">{tech}</span>
+          ))}
+        </div>
+
+        <div className="features-preview">
+          <div className="feature-title">
+            <SparklesIcon size={14} />
+            <span>Highlights</span>
           </div>
-        )}
-
-        <div className="project-links">
-          {project.githubLink && (
-            <a href={project.githubLink} className="github-link" target="_blank" rel="noopener noreferrer">
-              <GithubIcon size={24} />
-              <span>View Code</span>
-            </a>
-          )}
-          {project.demoLink && (
-            <a href={project.demoLink} className="demo-link" target="_blank" rel="noopener noreferrer">
-              <ExternalLinkIcon size={24} />
-              <span>Live Demo</span>
-            </a>
-          )}
+          <ul>
+            {project.features.slice(0, 3).map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
@@ -86,77 +74,68 @@ const Projects = () => {
   const projects = [
     {
       title: 'Notezy',
-      description: 'Your Digital Desk for Notes & Tasks',
-      icon: <NoteIcon size={32} />,
+      description: 'Your intelligent digital desk for organizing notes and tasks with real-time sync.',
+      icon: <NoteIcon size={24} />,
       image: note,
+      type: 'Productivity Tool',
       features: ['Real-time Generation', 'Multi-track Export', 'Genre Mixing'],
-      techStack: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      techStack: ['React.js', 'Node.js', 'MongoDB', 'Tailwind'],
       githubLink: 'https://github.com/shauryagupta045/NotesTaskingApp',
       demoLink: 'https://notes-tasking-app-nine.vercel.app/',
+      className: 'theme-purple'
     },
     {
-      className: 'nextgen',
       title: 'NextGen-G',
-      description: "From Classic Hits to New Releases—We've Got You Covered",
-      icon: <MonitorIcon size={32} />,
+      description: "The ultimate destination for gamers. Shop classic hits and new releases.",
+      icon: <GamepadIcon size={24} />,
       image: nextgen,
-      features: ['Store Feature', 'News Section', 'Community Forum or Discussion Board'],
-      techStack: ['React.js', 'TailWind CSS', 'Gsap'],
+      type: 'E-Commerce',
+      features: ['Store Feature', 'News Section', 'Community Forum'],
+      techStack: ['React.js', 'Tailwind', 'GSAP'],
       githubLink: 'https://github.com/shauryagupta045/GamingShopWebsite',
       demoLink: 'https://nextgeng.onrender.com/',
+      className: 'theme-orange'
     },
     {
-      className: 'vision',
       title: 'Vision AI',
-      description: "Ask me anything—I've got answers",
-      icon: <BrainIcon size={32} />,
+      description: "An advanced AI assistant that understands natural language and performs tasks.",
+      icon: <BrainIcon size={24} />,
       image: vision,
-      features: ['Understands natural language', 'Knows many topics', 'Writes like humans','Performs user tasks'],
-      techStack: ['React.js', 'Gemini APi'],
+      type: 'Artificial Intelligence',
+      features: ['Natural Language', 'Task Automation', 'Human-like Responses'],
+      techStack: ['React.js', 'Gemini API'],
       githubLink: 'https://github.com/shauryagupta045/Vision_AI',
       demoLink: 'https://shauryagupta045.github.io/Vision_AI/',
+      className: 'theme-blue'
     },
-    /* 
     {
-      className: 'games',
-      title: 'Games',
-      description: 'Interactive Gaming Experience',
-      icon: <GamepadIcon size={32} />,
-      features: ['Real-time Generation', 'Multi-track Export', 'Genre Mixing'],
-      techStack: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-      githubLink: '#',
-      demoLink: '#',
-    },*/
-    {
-      className: 'elearing',
       title: 'Skill-Forge',
-      description: "Empower your learning journey with expert-led courses, interactive content, and career-ready skills.",
-      icon: <MonitorIcon size={32} />,
+      description: "Empower your learning journey with expert-led interactive courses.",
+      icon: <MonitorIcon size={24} />,
       image: sf,
-      features: ['Interactive Courses', 'Progress Tracking', 'Certification on Completion'],
-      techStack: ['html5', 'CSS', 'javaScript', 'bootstrap'],
+      type: 'EdTech Platform',
+      features: ['Interactive Courses', 'Progress Tracking', 'Certification'],
+      techStack: ['HTML5', 'JavaScript', 'Bootstrap'],
       githubLink: 'https://github.com/shauryagupta045/Skill-Forge_ElearingWebsite',
       demoLink: 'https://skill-forge-jade.vercel.app/',
+      className: 'theme-green'
     },
-
   ];
 
   return (
     <section className="projects section" id="projects">
       <div className="container flex-center">
+
         <h1 className="section-title-01">PROJECTS</h1>
-        <h1 className="section-title-02">PROJECTS</h1>
-        <div className="content">
-          <div className="projects-description">
-            <h3>WHAT I PROVIDE YOU</h3>
-          </div>
-          <div className="projects-grid">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
-        </div>
+        <h2 className="section-title-02">FEATURED PROJECTS</h2>
+
       </div>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </div>
+
     </section>
   );
 };

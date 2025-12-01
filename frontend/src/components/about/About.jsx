@@ -1,6 +1,6 @@
 import React from "react";
-import "./About.css"; 
-import  sha2 from "../../assets/sg4.png";
+import "./About.css";
+import sha2 from "../../assets/sg4.png";
 
 const About = () => {
   return (
@@ -32,11 +32,11 @@ const About = () => {
                 and drive innovation that makes a difference.
               </p>
               <a
-                href="https://drive.google.com/file/d/1R3fgcS-1NINPZ3wfK0wiCvr53ej5uamJ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1iH0uzlzmPCdJ1MxnrkV4FXliMt2OSJlP/view?usp=sharing"
                 className="btn"
-              
+
               >
-                DOWNLOAD CV 
+                DOWNLOAD CV
               </a>
             </div>
           </div>

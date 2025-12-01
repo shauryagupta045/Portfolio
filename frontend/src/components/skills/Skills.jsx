@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Skills.css"; 
+import "./Skills.css";
 
 import c from "../../assets/c.png";
 import c1 from "../../assets/c++.png";
@@ -82,7 +82,7 @@ const Skills = () => {
                       </div>
                       <div className="info-item">
                         <i data-lucide="star" className="info-icon"></i>
-                        <span>CGPA: 8.2/10</span>
+                        <span>CGPA: 8.3/10</span>
                       </div>
                     </div>
                   </div>

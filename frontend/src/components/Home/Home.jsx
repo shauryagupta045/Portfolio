@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { FaLinkedin, FaGithub, FaArrowDown } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import sha from "../../assets/sg3.png";
 
 const roles = ["SOFTWARE ENGINEER", "WEB DEVELOPER", "UI/UX DESIGNER"];
@@ -14,33 +15,33 @@ const Home = () => {
   useEffect(() => {
     const currentRole = roles[roleIndex];
 
-  
+
     if (!isDeleting && charIndex < currentRole.length) {
       const timeout = setTimeout(() => {
         setCharIndex((prev) => prev + 1);
-      }, 100); 
+      }, 100);
       return () => clearTimeout(timeout);
     }
- 
+
     else if (!isDeleting && charIndex === currentRole.length) {
       const timeout = setTimeout(() => {
         setIsDeleting(true);
-      }, 1000); 
+      }, 1000);
       return () => clearTimeout(timeout);
     }
 
     else if (isDeleting && charIndex > 0) {
       const timeout = setTimeout(() => {
         setCharIndex((prev) => prev - 1);
-      }, 50); 
+      }, 50);
       return () => clearTimeout(timeout);
     }
-    
+
     else if (isDeleting && charIndex === 0) {
       const timeout = setTimeout(() => {
         setIsDeleting(false);
         setRoleIndex((prev) => (prev + 1) % roles.length);
-      }, 500); 
+      }, 500);
       return () => clearTimeout(timeout);
     }
   }, [charIndex, isDeleting, roleIndex]);
@@ -70,6 +71,9 @@ const Home = () => {
             <a href="https://github.com/shauryagupta045">
               <FaGithub />
             </a>
+            <a href="https://leetcode.com/u/guptashaurya0728/">
+              <SiLeetcode />
+            </a>
           </div>
 
           <div className="info">
@@ -79,9 +83,7 @@ const Home = () => {
               <span>SHAURYA GUPTA</span>
             </h2>
             <h3>{displayText}</h3>
-           
           </div>
-
 
           <div className="blobpic">
             <img src={sha} alt="photo" />
